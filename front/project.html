@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		
+		<!-- Remove Tap Highlight on Windows Phone IE -->
+        <meta name="msapplication-tap-highlight" content="no"/>
+		
+		<title>ESSL - Application Developers</title>
+		
+		<!--======================================================
+			CSS Stylesheets
+		======================================================-->
+		<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/animate.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/linea.css' >
+		<link rel='stylesheet' type='text/css' href='css/waves.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/owl.carousel.css' >
+		<link rel='stylesheet' type='text/css' href='css/magnific-popup.css' >
+		<link rel='stylesheet' type='text/css' href='css/style.css' >
+	</head>
+	
+	<body ng-app="app" ng-controller="projectCon as vm">
+
+    <div ng-include="'front/incs/nav.html'"></div>
+		
+		<!--======================================================
+			Selected Project Section
+		======================================================-->
+		<section id='project' class='main-section parallax' data-parallax='scroll' data-image-src='img/bg-main.jpg' >
+            <div class='container' >
+
+                <div class='section-header text-center' >
+                    <h2 class='wow fadeInUp' data-wow-delay='.2s' >{{item.title}}</h2>
+                    <p class='wow fadeInUp' data-wow-delay='.4s' >{{item.caption}}</p>
+                </div>
+
+                <div class='row' >
+                    <div class='col-md-12' >
+
+                        <div class='icon-feature wow fadeInUp' data-wow-delay='.2s' >
+
+                            <div class='icon' >
+                                <i class='icon-basic-paperplane' ></i>
+                            </div>
+
+                            <div class='content' >
+                                <img ng-src="{{item.thumbnail}}" class="thumbnail" style="float: left" />
+                                <p ng-bind-html="item.description"></p>
+                                <button class="btn-custom arrow-btn wow fadeInUp" ng-show="isowned">Join</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class='row' >
+
+                    <div class='col-md-4' >
+
+                        <div class='icon-feature wow fadeInUp' data-wow-delay='.2s' >
+                            <div class='icon' >
+                                <i class='icon-ecommerce-wallet' ></i>
+                            </div>
+                            <div class='content' >
+                                <h4>Save Money</h4>
+                                <p>
+                                    Eu apeirian probatus scriptorem mea. Usu ea unum congue suavitate, no oratio blandit eos, lorem ipsum dolor.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class='col-md-4' >
+
+                        <div class='icon-feature wow fadeInUp' data-wow-delay='.4s' >
+                            <div class='icon' >
+                                <i class='icon-basic-gear' ></i>
+                            </div>
+                            <div class='content' >
+                                <h4>Customizable</h4>
+                                <p>
+                                    Eu apeirian probatus scriptorem mea. Usu ea unum congue suavitate, no oratio blandit eos, lorem ipsum dolor.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class='col-md-4' >
+
+                        <div class='icon-feature wow fadeInUp' data-wow-delay='.6s' >
+                            <div class='icon' >
+                                <i class='icon-ecommerce-graph1' ></i>
+                            </div>
+                            <div class='content' >
+                                <h4>Data Report</h4>
+                                <p>
+                                    Eu apeirian probatus scriptorem mea. Usu ea unum congue suavitate, no oratio blandit eos, lorem ipsum dolor.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class='mockup' >
+                    <img class='shadow wow zoomIn animated' src='img/perspective-shadow.png' alt>
+                    <img class='phone wow fadeInDown animated' src='img/perspective-phone.png' alt>
+                </div>
+
+            </div>
+			
+
+		</section>
+
+		<div ng-include="'front/incs/footer.html'"></div>
+
+		<!--======================================================
+			JavaScript Files
+		======================================================-->
+		<script src='js/jquery.min.js' ></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-ui-router.js"></script>
+        <script src='bootstrap/js/bootstrap.min.js' ></script>
+		<script src='js/jquery.magnific-popup.min.js' ></script>
+		<script src='js/jquery.ajaxchimp.min.js' ></script>
+		<script src='js/parallax.min.js' ></script>
+		<script src='js/particles.min.js' ></script>
+		<script src='js/waves.min.js' ></script>
+		<script src='js/owl.carousel.min.js' ></script>
+		<script src='js/wow.min.js' ></script>
+		<script src='js/validator.min.js' ></script>
+		<script src='js/smooth-scroll.min.js' ></script>
+		<script src='js/script.js' ></script>
+        <script src="js/notify.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/main.js"></script>
+	</body>
+</html>
+<div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="quoteModalLabel" aria-hidden="true" data-dismiss="quoteModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title text-divider white text-center" id="myModalLabel">Request A Quote</h2>
+
+            </div>
+            <div class="modal-body" ng-controller="homeCon as vm">
+                <div class="content">
+                    <form name="form">
+                        <div class="form-group">
+                            <p>Business Type{{test}}</p>
+                            <label class="radio-inline">
+                                <input type="radio" name="radios" ng-model="req.biz" value="Male" checked>B2B
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="radios" ng-model="req.biz" value="Female">B2C
+                            </label>
+                        </div>
+                        <div class="col-md-6 form-line">
+                            <div class="form-group">
+                                <label for="yn">Your name</label>
+                                <input type="text" class="form-control" id="yn" placeholder=" Enter Name" ng-model="req.name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail">Email Address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id" ng-model="req.email" >
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone">Mobile No.</label>
+                                <input type="tel" class="form-control" id="telephone" placeholder=" Enter 10-digit mobile no." ng-model="req.mobile">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="file">File</label>
+                            <input type="file" id="file" class="form-control" ng-model="req.file">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for ="description">What will you like to build</label>
+                                <textarea  class="form-control" id="description" placeholder="Enter Your Message" ng-model="req.message"></textarea>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-default submit" ng-click="vm.addQuote()" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Request Quote</button>
+                                <img ng-if="vm.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                            </div>
+
+                        </div>
+                    </form>
+                    <hr>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- what we do modal -->
+        <div class="modal" id="wedo" data-dismiss="quoteModal">
+            <div class="modal-header">
+                {{item}}
+            </div>
+            <div class="modal-body">
+                <img ng-src="{{item.thumbnail}}" class="thumbnail" style="float: left" />
+                <p ng-bind-html="item.description"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" ng-show="isowned">Join</button>
+            </div>
+
+        </div>
